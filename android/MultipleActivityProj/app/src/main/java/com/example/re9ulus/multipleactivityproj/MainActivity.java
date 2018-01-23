@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView firstView = (TextView) findViewById(R.id.first_list_item);
+        TextView firstView = (TextView) findViewById(R.id.numbers_activity);
         firstView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), NumbersActivity.class);
