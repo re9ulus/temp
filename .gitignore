@@ -76,3 +76,8 @@ android/*/atlassian-ide-plugin.xml
 android/*/com_crashlytics_export_strings.xml
 android/*/crashlytics.properties
 android/*/crashlytics-build.properties
+
+# CLion
+concurrency/*/.idea/
+concurrency/*/cmake-build-debug
+concurrency/*/cmake-build-release
