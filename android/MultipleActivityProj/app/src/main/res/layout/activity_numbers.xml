@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/numbers_activity"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,12 +8,5 @@
     android:orientation="vertical"
     tools:context="com.example.re9ulus.multipleactivityproj.NumbersActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Numbers Activity"
-        android:gravity="center_horizontal"
-        android:textSize="32sp"
-        android:paddingTop="16dp"/>
 
-</android.widget.LinearLayout>
+</ListView>

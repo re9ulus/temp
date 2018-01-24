@@ -4,7 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class NumbersActivity extends AppCompatActivity {
@@ -13,19 +15,14 @@ public class NumbersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
-
         RenderNumbers();
     }
 
     void RenderNumbers() {
-        LinearLayout currentLayout = (LinearLayout) findViewById(R.id.numbers_activity);
-        for (String number : numbers) {
-            TextView numberTextView = new TextView(this);
-            numberTextView.setText(number);
-            numberTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 32);
-            numberTextView.setGravity(Gravity.CENTER);
-            currentLayout.addView(numberTextView);
-        }
+        ListView numbersView = (ListView) findViewById(R.id.numbers_activity);
+        ArrayAdapter<String> numbersAdapter = new ArrayAdapter<String>
+                (this, android.R.layout.simple_list_item_1, numbers);
+        numbersView.setAdapter(numbersAdapter);
     }
 
     String[] numbers = {"one", "two", "three", "four", "five"};
